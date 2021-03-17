@@ -1,0 +1,32 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+.main-menu{
+	background: #ededed;
+}
+.main-menu ul{
+	padding: 0;
+	list-style: none;
+}
+.main-menu ul li{
+	display: inline-block;
+
+}
+.main-menu ul li a{
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.main-menu ul li a.router-link-active {
+	background: green;
+	color: #fff;
+}

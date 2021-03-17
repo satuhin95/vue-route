@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Router Practice</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<div class="container">
+		<div class="contain">
+			<nav class="main-menu">
+			    <ul>
+			        <li><router-link to="/">Home</router-link></li>
+			        <li><router-link to="about">About</router-link></li>
+			  		 <li><router-link to="others">Others</router-link></li>
+			    	<li><router-link to="contact">Contact</router-link></li>
+			    </ul>
+			</nav>
+			<router-view></router-view>
+			
+		</div>
+	</div>
+
+<script src="js/vue.js"></script>
+	<script src="js/vue-router.js"></script>
+	<script type="text/javascript">
+		const Home ={
+			template:`
+			<div class="contain-body">
+				<h2>Home</h2>
+				<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+			</div>
+			`
+		};
+		const About ={
+			template:`
+			<div class="contain-body">
+				<h2>About</h2>
+				<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+				<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+			</div>
+			`
+		};
+		const Others ={
+			template:`
+			<div class="contain-body">
+				<h2>Others</h2>
+				<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+				<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+			</div>
+			`
+		};
+		const Contact ={
+			template:`
+			<div class="contain-body">
+				<h2>Contact</h2>
+				<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+				<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+			</div>
+			`
+		};
+		const routes = [
+			{path:"/",component:Home},
+			{path:"/about",component:About},
+			{path:"/others",component:Others},
+			{path:"/contact",component:Contact}
+		];
+		let router = new VueRouter({
+			routes,
+			mode:"history",
+			base:"vue/motaleb/router/"
+		});
+		const app =new Vue({
+			router
+		}).$mount(".contain");
+	</script>
+</body>
+</html>
